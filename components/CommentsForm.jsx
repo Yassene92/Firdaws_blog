@@ -1,5 +1,5 @@
-import { React, useState, useEffect, useRef } from 'react';
-import { submitComment } from '../services';
+import { React, useState, useEffect, useRef } from "react";
+import { submitComment } from "../services";
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
@@ -10,8 +10,8 @@ const CommentsForm = ({ slug }) => {
   const storeDataEl = useRef();
 
   useEffect(() => {
-    nameEl.current.value = window.localStorage.getItem('name');
-    emailEl.current.value = window.localStorage.getItem('email');
+    nameEl.current.value = window.localStorage.getItem("name");
+    emailEl.current.value = window.localStorage.getItem("email");
   }, []);
 
   const handleCommentSubmission = () => {
@@ -33,11 +33,11 @@ const CommentsForm = ({ slug }) => {
     };
 
     if (storeData) {
-      window.localStorage.setItem('name', name);
-      window.localStorage.setItem('email', email);
+      window.localStorage.setItem("name", name);
+      window.localStorage.setItem("email", email);
     } else {
-      window.localStorage.removeItem('name');
-      window.localStorage.removeItem('email');
+      window.localStorage.removeItem("name");
+      window.localStorage.removeItem("email");
     }
 
     submitComment(commentObj).then(() => {
@@ -87,7 +87,7 @@ const CommentsForm = ({ slug }) => {
             value="true"
           />
           <label className="cursor-pointer text-gray-500" htmlFor="storeData">
-            {' '}
+            {" "}
             Save my name, email in this browser for the next time I comment.
           </label>
         </div>
