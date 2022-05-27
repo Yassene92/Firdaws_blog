@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 
 import { AdjacentPostCard } from "../components";
 import { getAdjacentPosts } from "../services";
@@ -17,7 +17,7 @@ const AdjacentPosts = ({ createdAt, slug }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 mb-8">
       {dataLoaded && (
-        <Fragment>
+        <>
           {adjacentPost.previous && (
             <div
               className={`${
@@ -40,7 +40,7 @@ const AdjacentPosts = ({ createdAt, slug }) => {
               <AdjacentPostCard post={adjacentPost.next} position="RIGHT" />
             </div>
           )}
-        </Fragment>
+        </>
       )}
     </div>
   );

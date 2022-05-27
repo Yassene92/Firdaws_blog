@@ -1,4 +1,4 @@
-import { React, Fragment } from "react";
+import React from "react";
 
 import moment from "moment";
 
@@ -61,7 +61,7 @@ const PostDetail = ({ post }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
@@ -114,7 +114,7 @@ const PostDetail = ({ post }) => {
           })}
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

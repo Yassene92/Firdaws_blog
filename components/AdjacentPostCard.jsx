@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import moment from "moment";
 import Link from "next/link";
 
 const AdjacentPostCard = ({ post, position }) => (
-  <Fragment>
+  <>
     <div
       className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72"
       style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
@@ -56,7 +56,7 @@ const AdjacentPostCard = ({ post, position }) => (
         </svg>
       </div>
     )}
-  </Fragment>
+  </>
 );
 
 export default AdjacentPostCard;
